@@ -56,9 +56,9 @@ if (cli.input.length === 0) {
 }
 
 if (['dev', 'build'].includes(cmd)) {
-  if (typeof filename === 'undefined') {
-    cli.showHelp(0)
-  }
+  // if (typeof filename === 'undefined') {
+  //   cli.showHelp(0)
+  // }
 
   utils.prepareVueCliService(cli, filename)
 }

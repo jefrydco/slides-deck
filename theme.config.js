@@ -1,9 +1,13 @@
 module.exports = {
   extend: {
+    fontFamily: {
+      'heading': ['Roboto Slab', 'serif'],
+      'body': ['Merriweather Sans', 'sans-serif']
+    },
     colors: {
       theme: {
-        text: '#fff',
-        background: '#011627',
+        text: '#4aacf3',
+        background: '#f5f5f5',
         dot: '#828A92',
       },
       code: {
@@ -14,15 +18,19 @@ module.exports = {
         blue: '#93ddfd',
         white: '#fff',
       },
+      logo: {
+        vue: "#41B883"
+      }
     },
   },
   // https://github.com/benface/tailwindcss-typography
   textStyles: theme => ({
     heading: {
       output: false,
-      color: '#6AD798',
+      color: theme('colors.blue.500'),
       fontWeight: theme('fontWeight.bold'),
       lineHeight: theme('lineHeight.tight'),
+      fontFamily: theme('fontFamily.heading'),
     },
     h1: { extends: 'heading', fontSize: theme('fontSize.6xl') },
     h2: { extends: 'heading', fontSize: theme('fontSize.5xl') },
@@ -44,7 +52,7 @@ module.exports = {
       overflow: 'hidden',
       fontWeight: theme('fontWeight.normal'),
       fontSize: '32px',
-      color: theme('colors.theme.text'),
+      color: theme('colors.gray.900'),
       lineHeight: theme('lineHeight.relaxed'),
       '> * + *': {
         marginTop: '1.5rem',
@@ -72,7 +80,7 @@ module.exports = {
       'pre[class*=language-]': {
         padding: '1rem',
         fontSize: theme('fontSize.base'),
-        fontFamily: theme('fontFamily.mono'),
+        // fontFamily: theme('fontFamily.mono'),
         fontWeight: theme('fontWeight.normal'),
         lineHeight: theme('lineHeight.normal'),
         backgroundColor: theme('colors.gray.800'),

@@ -5,8 +5,10 @@
 @import "tailwindcss/components";
 
 /* purgecss start ignore */
+@import "./fonts.css";
 @import "./components/transitions.css";
 @import "./prism-atom-dark.css";
+@import "./custom.css";
 /* purgecss end ignore */
 
 @import "tailwindcss/utilities";
