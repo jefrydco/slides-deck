@@ -36,7 +36,7 @@
     "postcss-nesting": "^7.0.1",
     "prettify-xml": "^1.2.0",
     "prismjs": "^1.19.0",
-    "serialize-javascript": "^3.0.0",
+    "serialize-javascript": "^2.1.1",
     "tailwindcss": "^1.2.0",
     "tailwindcss-typography": "^3.0.1",
     "vue": "^2.6.11",
