@@ -9,6 +9,7 @@ pre[class*="language-"] {
   /*color: #c5c8c6;*/
   /*text-shadow: 0 1px rgba(0, 0, 0, 0.3);*/
   /*font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;*/
+  font-family: 'Fira Code', monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -28,11 +29,13 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-  @apply p-4;
+  @apply p-4 max-w-2xl;
   /*padding: 1em;*/
   /*margin: .5em 0;*/
   overflow: auto;
   border-radius: 0.3em;
+  max-height: 70vh;
+  overflow: auto;
 }
 
 /* Inline code */

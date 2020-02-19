@@ -18,11 +18,13 @@ const getCodeEl = (createElement, slots, { lineNumbers }) => {
     }, [slots.default[1]])
   } else {
     const prettyHTML = prettifyXml(getChildrenTextContent(slots.default), {
-      indent: 4, newline: '\n    '
+      indent: 2, newline: '\n    '
     })
+    console.log(slots.default)
     const codeHTML = md.render(`
     ${prettyHTML}
     `)
+    console.log(codeHTML)
     return createElement('div', {
       attrs: { class: `language-html ${lineNumbers ? 'line-numbers' : ''}` },
       domProps: {
