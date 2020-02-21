@@ -24,7 +24,7 @@ export default {
     },
     step(step) {
       if (this.active) {
-        history.pushState({}, '', `/#/${this.currentPage}${step ? `.${step}`: ''}`);
+        history.pushState({}, '', `/${this.currentPage}${step ? `.${step}`: ''}`);
       }
     },
   },

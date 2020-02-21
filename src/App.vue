@@ -16,6 +16,10 @@
         </transition>
 
         <div v-if="mode==='normal'">
+          <header class="fixed top-0 inset-x-0 bg-theme-background p-5 z-50 flex justify-between">
+            <a href="https://jefrydco.id" target="_blank">@jefrydco</a>
+            <time>20 February 2020</time>
+          </header>
           <div class="fixed bottom-0 inset-x-0 mb-2 flex justify-center">
             <button v-for="i in decks.length" :key="i"
               type="button"
@@ -58,16 +62,16 @@ export default {
   },
 
   data: () => ({
-    transitionName: 'slide-left',
+    transitionName: 'fade',
     decks: [],
   }),
 
   watch: {
-    '$route' (to, from) {
-      const toPage = parseInt(to.params.page)
-      const fromPage = parseInt(from.params.page)
-      this.transitionName = toPage < fromPage ? 'slide-right' : 'slide-left'
-    },
+    // '$route' (to, from) {
+    //   const toPage = parseInt(to.params.page)
+    //   const fromPage = parseInt(from.params.page)
+    //   this.transitionName = toPage < fromPage ? 'slide-right' : 'slide-left'
+    // },
   },
 
   computed: {
@@ -98,12 +102,13 @@ export default {
 
     this.$store.commit('setStep', parseInt(location.hash.split('.')[1] || 0))
 
-    Mousetrap.bind('option+p', () => this.$store.commit('toggleMode', 'presenter'))
+    Mousetrap.bind('option+v', () => this.$store.commit('toggleMode', 'presenter'))
     Mousetrap.bind('option+o', () => this.$store.commit('toggleMode', 'overview'))
     Mousetrap.bind('option+g', () => this.$store.commit('toggleMode', 'grid'))
     Mousetrap.bind(['right', 'pagedown', 'space'], () => this.next())
     Mousetrap.bind(['left', 'pageup', 'shift+space'], () => this.previous())
     Mousetrap.bind('esc', () => this.$store.commit('toggleMode', 'normal'))
+    this.$router.replace('/1')
   },
 
   methods: {

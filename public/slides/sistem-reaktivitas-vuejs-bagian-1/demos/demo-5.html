@@ -1,0 +1,91 @@
+<div class="demo-card demo-card-2">
+  <pre class="keadaan"></pre>
+
+  <input type="number" class="input1" min="0" />
+  <select class="operator">
+    <option value="+">&plus;</option>
+    <option value="-">&minus;</option>
+    <option value="*">&times;</option>
+    <option value="/">&divide;</option>
+  </select>
+  <input type="number" class="input2" min="0" />
+
+  <div class="hasil"></div>
+
+  <script>
+    const OPERATOR = {
+      TAMBAH: '+',
+      KURANG: '-',
+      KALI: '*',
+      BAGI: '/'
+    }
+
+    const keadaan = {
+      hasil: 0,
+      operator: OPERATOR.TAMBAH,
+      input1: 0,
+      input2: 0
+    }
+
+    function mulai() {
+      const tampilanKeadaan = document.querySelector('.keadaan')
+      const tampilanHasil = document.querySelector('.hasil')
+      const tampilanInput1 = document.querySelector('.input1')
+      const tampilanInput2 = document.querySelector('.input2')
+      const tampilanOperator = document.querySelector('.operator')
+
+      function mutakhirkanTampilan() {
+        tampilanKeadaan.innerText = JSON.stringify(keadaan, null, 2)
+        tampilanHasil.innerText = keadaan.hasil.toString()
+        tampilanInput1.value = keadaan.input1.toString()
+        tampilanInput2.value = keadaan.input2.toString()
+        tampilanOperator.value = keadaan.operator
+      }
+      mutakhirkanTampilan()
+
+      function kalkulasiHasil() {
+        switch (keadaan.operator) {
+          case OPERATOR.TAMBAH:
+            keadaan.hasil = keadaan.input1 + keadaan.input2
+            break
+          case OPERATOR.KURANG:
+            keadaan.hasil = keadaan.input1 - keadaan.input2
+            break
+          case OPERATOR.KALI:
+            keadaan.hasil = keadaan.input1 * keadaan.input2
+            break
+          case OPERATOR.BAGI:
+            keadaan.hasil = keadaan.input1 / keadaan.input2
+            break
+          default:
+            break;
+        }
+      }
+
+      tampilanInput1.addEventListener('input', (peristiwa) => {
+        const targetInput1 = peristiwa.target
+        keadaan.input1 = parseInt(targetInput1.value)
+        kalkulasiHasil()
+        mutakhirkanTampilan()
+      })
+      tampilanInput2.addEventListener('input', (peristiwa) => {
+        const targetInput2 = peristiwa.target
+        keadaan.input2 = parseInt(targetInput2.value)
+        kalkulasiHasil()
+        mutakhirkanTampilan()
+      })
+      tampilanOperator.addEventListener('change', (peristiwa) => {
+        const targetOperator = peristiwa.target
+        const selectedOperator = targetOperator
+          .selectedOptions[0]
+          .value
+        keadaan.operator = selectedOperator
+        kalkulasiHasil()
+        mutakhirkanTampilan()
+      })
+    }
+
+    document.addEventListener('DOMContentLoaded', mulai)
+    window.keadaan = keadaan
+  </script>
+</div>

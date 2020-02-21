@@ -1,0 +1,626 @@
+import Appear from '@/components/Appear'
+
+<div class="text-center">
+  <h2 class="h2">Hai, saya Jefry 👋🏻</h2>
+  <Appear>
+    <p>Rekanan Insinyur Perangkat Lunak Bagian Depan @ <span class="text-blue-500">DANA Indonesia</span></p>
+    <p>Penyelenggara Komunitas <span class="text-logo-vue">Vue.js</span> Indonesia</p>
+    <img class="mt-5 mx-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA/CAMAAACCXfuUAAAAh1BMVEVHcEwhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvNiF0boAAAALHRSTlMAIJBeMxP1zJlmmAY1O7f51ifBCSxHlfNNh6Pn7H5x/Ric46/hUtl1QKhr0UvQqeIAAAHbSURBVHjavZZnb4MwEECPYcweGZA9mjSr/v+/r0qLucg9i3NV9X0882TsGwB/SnaYhYgAC1KNsJfH4OAoIpMgM8VI8VgnhqjYyObVOyg+0QKQULmQANIqgqqW39TGwjsQ6MUcXmmC0x7FaDYuIsJHs87sYgg/yM+DeeWIiDeYnWCJaHa4JUdEgqGECJFADgmY6NCcECmCfnmhAz5T3OgErPvAhSmq3KwxwRQL811vTFF3k8BSZ4k1aNaW29nTTVj8mDKxIXaE1p1e2uHYB0tD1OU4AwuxLgojfunjnk30LaLENNHsRsSpTXyMiGBjiZfjJsaYDlJMXgkJMSVFkxKPXPahB0tUK9B84HDliOpgFvOMJWJb5XrMA0vERr7qbyVXFMbdbJniyuzjnCdOdDq2feANbGKMpP7wLRWbfnlpFYGkVdh1Lm01xyMTon0CFJFOYmMXQ2K/SOEJ+aJIcVZSXb6nxXka4axsqGPo1YuU969ctG18lJVCqhs5w5x+kBAvGvM2BeVNJ2Ne6ZHefUQ7B0AhRvaTQUZ687Oy05VbD0hEjE/5RZA82S3bNE2XSXJDySDbbdCLgY+vDM9drHYuHia+Dh0s/EmLtlNw5fTsaw/cEetVA79iCv/HJ2tF+J+Kc7zlAAAAAElFTkSuQmCC" width="56" height="63" alt="jefrydco" />
+  </Appear>
+</div>
+
+---
+
+<h1 class="text-center">Membuat Sistem Reaktivitas Vue.js<br/>Versi Sederhana</h1>
+
+---
+
+<div class="w-full max-w-3xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/spreadsheet-average-reactivity-by-jefrydco.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+```html
+<div class='demo-card'>
+  <pre class='keadaan'></pre>
+
+  <input type='number' class='input1' min='0' />
+  <select class='operator'>
+    <option value='+'>&plus;</option>
+    <option value='-'>&minus;</option>
+    <option value='*'>&times;</option>
+    <option value='/'>&divide;</option>
+  </select>
+  <input type='number' class='input2' min='0' />
+
+  <div class='hasil'></div>
+
+  <script></script>
+</div>
+```
+
+---
+
+<div class="bg-white rounded overflow-hidden p-4">
+  <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-1.html"></iframe>
+</div>
+<div class="mt-5">
+  <h2 class="text-2xl text-center">Demo 1</h2>
+  <h3 class="text-xl">Struktur HTML</h3>
+</div>
+
+---
+
+```javascript
+const OPERATOR = {
+  TAMBAH: '+',
+  KURANG: '-',
+  KALI: '*',
+  BAGI: '/'
+}
+const keadaan = {
+  hasil: 0,
+  operator: OPERATOR.TAMBAH,
+  input1: 0,
+  input2: 0
+}
+function mulai() {
+  const tampilanKeadaan = document.querySelector('.keadaan')
+  const tampilanHasil = document.querySelector('.hasil')
+  const tampilanInput1 = document.querySelector('.input1')
+  const tampilanInput2 = document.querySelector('.input2')
+  const tampilanOperator = document.querySelector('.operator')
+}
+document.addEventListener('DOMContentLoaded', mulai)
+```
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  function mutakhirkanTampilan() {
+    tampilanKeadaan.innerText = JSON.stringify(keadaan, null, 2)
+    tampilanHasil.innerText = keadaan.hasil.toString()
+    tampilanInput1.value = keadaan.input1.toString()
+    tampilanInput2.value = keadaan.input2.toString()
+    tampilanOperator.value = keadaan.operator
+  }
+  mutakhirkanTampilan()
+  // ... Kode setelahnya
+}
+```
+
+---
+
+<div class="w-full max-w-3xl flex flex-row justify-between">
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-1.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 1</h2>
+      <h3 class="text-xl">Struktur HTML</h3>
+    </div>
+  </div>
+
+  <div class="py-16">→</div>
+
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-2.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 2</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+    </div>
+  </div>
+</div>
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  mutakhirkanTampilan()
+
+  tampilanInput1.addEventListener('input', (peristiwa) => {
+    const targetInput1 = peristiwa.target
+    keadaan.input1 = parseInt(targetInput1.value)
+  })
+  tampilanInput2.addEventListener('input', (peristiwa) => {
+    const targetInput2 = peristiwa.target
+    keadaan.input2 = parseInt(targetInput2.value)
+  })
+  tampilanOperator.addEventListener('change', (peristiwa) => {
+    const targetOperator = peristiwa.target
+    const selectedOperator = targetOperator
+      .selectedOptions[0]
+      .value
+    keadaan.operator = selectedOperator
+  })
+  // ... Kode setelahnya
+}
+```
+
+---
+
+<div class="w-full max-w-3xl flex flex-row justify-between">
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-2.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 2</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+    </div>
+  </div>
+
+  <div class="py-16">→</div>
+
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-3.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 3</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengatur ulang</strong> nilai keadaan
+      </h3>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/reset-state.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  mutakhirkanTampilan()
+
+  function kalkulasiHasil() {
+    switch (keadaan.operator) {
+      case OPERATOR.TAMBAH:
+        keadaan.hasil = keadaan.input1 + keadaan.input2
+        break
+      case OPERATOR.KURANG:
+        keadaan.hasil = keadaan.input1 - keadaan.input2
+        break
+      case OPERATOR.KALI:
+        keadaan.hasil = keadaan.input1 * keadaan.input2
+        break
+      case OPERATOR.BAGI:
+        keadaan.hasil = keadaan.input1 / keadaan.input2
+        break
+      default:
+        break;
+    }
+  }
+  // ... Kode setelahnya
+}
+```
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  tampilanInput1.addEventListener('input', (peristiwa) => {
+    // ... Kode sebelumnya
+    kalkulasiHasil()
+  })
+  tampilanInput2.addEventListener('input', (peristiwa) => {
+    // ... Kode sebelumnya
+    kalkulasiHasil()
+  })
+  tampilanOperator.addEventListener('change', (peristiwa) => {
+    // ... Kode sebelumnya
+    kalkulasiHasil()
+  })
+  // ... Kode setelahnya
+}
+```
+
+---
+
+<div class="w-full max-w-3xl flex flex-row justify-between">
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-3.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 3</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengatur ulang</strong> nilai keadaan
+      </h3>
+    </div>
+  </div>
+
+  <div class="py-16">→</div>
+
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-4.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 4</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengatur ulang</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengkalkulasi</strong> hasil
+      </h3>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/media.io_recalculate-state.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  tampilanInput1.addEventListener('input', (peristiwa) => {
+    // ... Kode sebelumnya
+    kalkulasiHasil()
+    mutakhirkanTampilan()
+  })
+  tampilanInput2.addEventListener('input', (peristiwa) => {
+    // ... Kode sebelumnya
+    kalkulasiHasil()
+    mutakhirkanTampilan()
+  })
+  tampilanOperator.addEventListener('change', (peristiwa) => {
+    // ... Kode sebelumnya
+    kalkulasiHasil()
+    mutakhirkanTampilan()
+  })
+  // ... Kode setelahnya
+}
+```
+
+---
+
+<div class="w-full max-w-3xl flex flex-row justify-between">
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-4.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 4</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengatur ulang</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengkalkulasi</strong> hasil
+      </h3>
+    </div>
+  </div>
+
+  <div class="py-16">→</div>
+
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-5.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 5</h2>
+      <h3 class="text-xl">
+        <strong>Menampilkan</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengatur ulang</strong> nilai keadaan
+      </h3>
+      <h3 class="text-xl">
+        <strong>Mengkalkulasi</strong> hasil
+      </h3>
+      <h3 class="text-xl">
+        <strong>Menampilkan ulang</strong> nilai keadaan
+      </h3>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/reactivity-event-listener.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+![Yes](/gif/yes.gif)
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  setInterval(() => {
+    keadaan.input1 = keadaan.input1 + ~~(Math.random() * 3) + 1
+    keadaan.input2 = keadaan.input2 + ~~(Math.random() * 3) + 1
+  }, 1000)
+  // ... Kode setelahnya
+}
+```
+
+---
+
+<div class="bg-white rounded overflow-hidden p-4">
+  <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-6.html"></iframe>
+</div>
+<div class="mt-5">
+  <h2 class="text-2xl text-center">Demo 6</h2>
+  <h3 class="text-xl">Perubahan Input1 dan Input2 dengan <em>setInterval</em></h3>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/media.io_change-does-not-affect-ui.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+<h2>Pengambil & Pengatur</h2>
+
+---
+
+```javascript
+const manusia = {
+  nama: 'jefrydco'
+}
+```
+
+---
+
+```javascript
+let nama = manusia['nama']
+
+Object.defineProperty(manusia, 'nama', {
+  enumerable: true,
+  configurable: true,
+  get: function pengambilReaktif() {
+    console.log('Properti telah diakses')
+    return nama
+  },
+  set: function pengaturReaktif(nilaiBaru) {
+    nama = nilaiBaru
+    console.log('Properti telah diubah')
+  }
+})
+```
+
+---
+
+<div class="w-full max-w-2xl">
+  <img src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/getter-setter.png" alt="Getter Setter"/>
+</div>
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  tampilanInput1.addEventListener('input', (peristiwa) => {
+    const targetInput1 = peristiwa.target
+    keadaan.input1 = parseInt(targetInput1.value)
+    // kalkulasiHasil()
+    // mutakhirkanTampilan()
+  })
+  // ... Kode setelahnya
+}
+```
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  let input1 = keadaan['input1']
+
+  Object.defineProperty(keadaan, 'input1', {
+    enumerable: true,
+    configurable: true,
+    get: function pengambilReaktif() {
+      return input1
+    },
+    set: function pengaturReaktif(nilaiBaru) {
+      input1 = nilaiBaru
+      kalkulasiHasil()
+      mutakhirkanTampilan()
+    }
+  })
+}
+```
+
+---
+
+<div class="w-full max-w-3xl flex flex-row justify-between">
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-6.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 6</h2>
+      <h3 class="text-xl">
+        Pendengar peristiwa
+      </h3>
+    </div>
+  </div>
+
+  <div class="py-16">→</div>
+
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-7.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 7</h2>
+      <h3 class="text-xl">
+        Pengambil dan Pengatur (input1)
+      </h3>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/getter-setter-input1.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  tampilanInput2.addEventListener('input', (peristiwa) => {
+    // ... Kode sebelumnya
+    // kalkulasiHasil()
+    // mutakhirkanTampilan()
+  })
+  tampilanOperator.addEventListener('change', (peristiwa) => {
+    // ... Kode sebelumnya
+    // kalkulasiHasil()
+    // mutakhirkanTampilan()
+  })
+  // ... Kode setelahnya
+}
+```
+
+---
+
+```javascript
+function mulai() {
+  // ... Kode sebelumnya
+  const daftarKunci = Object.keys(keadaan)
+
+  daftarKunci.forEach(kunci => {
+    let nilai = keadaan[kunci]
+
+    Object.defineProperty(keadaan, kunci, {
+      enumerable: true,
+      configurable: true,
+      get: function pengambilReaktif() {
+        return nilai
+      },
+      set: function pengaturReaktif(nilaiBaru) {
+        if (nilai === nilaiBaru) {
+          return;
+        }
+        nilai = nilaiBaru
+        kalkulasiHasil()
+        mutakhirkanTampilan()
+      }
+    })
+  })
+}
+```
+
+---
+
+<div class="w-full max-w-3xl flex flex-row justify-between">
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-7.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 7</h2>
+      <h3 class="text-xl">
+        Pengambil dan Pengatur (input1)
+      </h3>
+    </div>
+  </div>
+
+  <div class="py-16">→</div>
+
+  <div>
+    <div class="bg-white rounded overflow-hidden p-4">
+      <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-8.html"></iframe>
+    </div>
+    <div class="mt-5">
+      <h2 class="text-2xl text-center">Demo 8</h2>
+      <h3 class="text-xl">
+        Pengambil dan Pengatur
+      </h3>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/getter-setter-all.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+<div class="w-full max-w-xl">
+  <img src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/getter-setter-vue.png" alt="Getter Setter Vue"/>
+</div>
+
+---
+
+<div class="w-full max-w-4xl">
+  <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/media.io_set-timeout-getter-setter.webm" autoplay="" loop="" muted="" playsinline=""/>
+</div>
+
+---
+
+![Dancing](/gif/dancing.gif)
+
+---
+
+<h2>Ikhtisar</h2>
+
+---
+
+<div class="w-full max-w-xl">
+  <img src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/simplified-version-of-vuejs-reactivity-system.png" alt="Getter Setter Vue"/>
+</div>
+
+---
+
+## Sumber Artikel
+1. [s.id/sistem-reaktivitas-vuejs-1](https://s.id/sistem-reaktivitas-vuejs-1)
+2. [s.id/sistem-reaktivitas-vuejs-2](https://s.id/sistem-reaktivitas-vuejs-2)
+
+---
+
+<h2>Terima Kasih</h2>
+<img class="mt-5 mx-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA/CAMAAACCXfuUAAAAh1BMVEVHcEwhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvNiF0boAAAALHRSTlMAIJBeMxP1zJlmmAY1O7f51ifBCSxHlfNNh6Pn7H5x/Ric46/hUtl1QKhr0UvQqeIAAAHbSURBVHjavZZnb4MwEECPYcweGZA9mjSr/v+/r0qLucg9i3NV9X0882TsGwB/SnaYhYgAC1KNsJfH4OAoIpMgM8VI8VgnhqjYyObVOyg+0QKQULmQANIqgqqW39TGwjsQ6MUcXmmC0x7FaDYuIsJHs87sYgg/yM+DeeWIiDeYnWCJaHa4JUdEgqGECJFADgmY6NCcECmCfnmhAz5T3OgErPvAhSmq3KwxwRQL811vTFF3k8BSZ4k1aNaW29nTTVj8mDKxIXaE1p1e2uHYB0tD1OU4AwuxLgojfunjnk30LaLENNHsRsSpTXyMiGBjiZfjJsaYDlJMXgkJMSVFkxKPXPahB0tUK9B84HDliOpgFvOMJWJb5XrMA0vERr7qbyVXFMbdbJniyuzjnCdOdDq2feANbGKMpP7wLRWbfnlpFYGkVdh1Lm01xyMTon0CFJFOYmMXQ2K/SOEJ+aJIcVZSXb6nxXka4axsqGPo1YuU969ctG18lJVCqhs5w5x+kBAvGvM2BeVNJ2Ne6ZHefUQ7B0AhRvaTQUZ687Oy05VbD0hEjE/5RZA82S3bNE2XSXJDySDbbdCLgY+vDM9drHYuHia+Dh0s/EmLtlNw5fTsaw/cEetVA79iCv/HJ2tF+J+Kc7zlAAAAAElFTkSuQmCC" width="56" height="63" alt="jefrydco" />
+
+---
+
+<div class="w-full max-w-5xl">
+  <img src="https://secure.meetupstatic.com/photos/event/b/c/d/c/highres_489048348.jpeg" alt="Vue.js Indonesia Meetup 1 Chapter Jakarta"/>
+</div>

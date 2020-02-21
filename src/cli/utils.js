@@ -80,7 +80,7 @@ export function vueCliService(...args) {
     stdio: 'inherit',
     preferLocal: true,
     env: {
-      SRC_DECK: process.env.__SRC__
+      SRC_DECK: process.env.SRC_SLIDE
     }
   })
 }
@@ -94,9 +94,11 @@ export function prepareVueCliService({ flags }, filename) {
     process.env.__TAILWIND_THEME_CONFIG_PATH__ = path.resolve('./theme.config.js')
   }
 
-  const source = path.resolve(filename)
+  const source = path.resolve(`slides/${filename}/index.mdx`)
 
-  !exists(source) && die(colors.file(filename), 'does not exists.')
-
-  process.env.__SRC__ = source
+  if (!exists(source)) {
+    process.env.SRC_SLIDE = path.resolve(`slides/index.mdx`)
+  } else {
+    process.env.SRC_SLIDE = source
+  }
 }

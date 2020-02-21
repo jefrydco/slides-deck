@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Deck from './views/Deck.vue'
+import Deck from '../views/Deck.vue'
 
 Vue.use(Router)
 
-export default new Router({
-  mode: 'hash',
+const router = new Router({
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
@@ -15,3 +15,5 @@ export default new Router({
     },
   ],
 })
+
+export default router
