@@ -10,15 +10,16 @@
       class="h-full"
     >
       <div class="relative h-full overflow-hidden bg-theme-background">
-        <transition :name="transitionName">
-          <router-view :key="$route.name + ($route.params.page || '')" :page="page" :decks="decks">
-          </router-view>
-        </transition>
+        <router-view :key="$route.name + ($route.params.page || '')" :page="page" :decks="decks">
+        </router-view>
+        <!-- <transition :name="transitionName">
+          
+        </transition> -->
 
         <div v-if="mode==='normal'">
           <header class="fixed top-0 inset-x-0 bg-theme-background p-5 z-50 flex justify-between">
             <a href="https://jefrydco.id" target="_blank">@jefrydco</a>
-            <time>20 February 2020</time>
+            <time datetime="31 July 2020">31 Juli 2020</time>
           </header>
           <div class="fixed bottom-0 inset-x-0 mb-2 flex justify-center">
             <button v-for="i in decks.length" :key="i"
@@ -108,7 +109,6 @@ export default {
     Mousetrap.bind(['right', 'pagedown', 'space'], () => this.next())
     Mousetrap.bind(['left', 'pageup', 'shift+space'], () => this.previous())
     Mousetrap.bind('esc', () => this.$store.commit('toggleMode', 'normal'))
-    this.$router.replace('/1')
   },
 
   methods: {
