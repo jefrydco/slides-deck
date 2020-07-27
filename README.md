@@ -2,6 +2,12 @@
 
 > This repository contains slides deck which I use to give a talks in community meetup or tech conference.
 
+## Languages
+
+Read this description in another languages:
+
+1. [Bahasa Indonesia](./readme.id.md)
+
 ## Getting Started
 
 Running the project
@@ -20,7 +26,7 @@ Change `SLIDE_TITLE` to the slide title which can be found on [Self-hosted](#sel
 
 ## Self-hosted
 
-### Membuat Sistem Reaktivitas Vue.js Versi Sederhana
+### #1 Membuat Sistem Reaktivitas Vue.js Versi Sederhana
 
 Running the project
 
@@ -43,16 +49,19 @@ Even poster:
 
 Besides of using self-hosted, sometimes I also use Google slides.
 
-### Adaptive Loading - Improving User Experience on Low-end Devices
+### #1 Adaptive Loading - Improving User Experience on Low-end Devices
 
 Link: [bit.ly/dek-slide-adaptive-loading](https://bit.ly/dek-slide-adaptive-loading)
 
 Even poster:
 1. [Chrome Dev Summit Extended Jakarta 2019](/poster/chrome-dev-summit-extended-jakarta-2019.png) (7 December 2019)
 
-### Vue.js Fundamental
+### #2 Vue.js Fundamental
 
-[]
+Link: [bit.ly/slide-vuejs](https://bit.ly/slide-vuejs)
+
+Even poster:
+1. [Vue.js Fundamental](/poster/himit-vuejs-fundamental.jpeg) (26 July 2020)
 
 ## Keyboard Shortcut
 

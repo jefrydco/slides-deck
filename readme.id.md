@@ -2,6 +2,12 @@
 
 > Repositori ini berisi _slide_ dek yang saya gunakan untuk mengisi acara pertemuan komunitas maupun konferensi teknologi
 
+## Bahasa
+
+Baca deskripsi ini di bahasa lain:
+
+1. [English](./readme.md)
+
 ## Mulai
 
 Menjalankan proyek
@@ -20,7 +26,7 @@ Ganti `JUDUL_ARTIKEL` dengan judul artikel yang dapat dilihat pada bagian [Host 
 
 ## _Host_ Sendiri
 
-### Membuat Sistem Reaktivitas Vue.js Versi Sederhana
+### #1 Membuat Sistem Reaktivitas Vue.js Versi Sederhana
 
 Menjalankan proyek
 
@@ -34,7 +40,7 @@ Membangun proyek untuk produksi
 $ SRC_SLIDE=sistem-reaktivitas-vuejs-bagian-1 yarn build
 ```
 
-Tautan: [s.id/slide-sistem-reaktivitas-vuejs-1](https://s.id/slide-sistem-reaktivitas-vuejs-1)
+Tautan: [bit.ly/dek-slide-sistem-reaktivitas-vuejs-1](https://bit.ly/dek-slide-sistem-reaktivitas-vuejs-1)
 
 Poster even:
 1. [JakartaJS Meetup #56 x Mekari](/public/poster/jakartajs-meetup-56-x-mekari.jpeg) (20 Februari 2020)
@@ -43,12 +49,19 @@ Poster even:
 
 Selain menggunakan _host_ sendiri, saya juga terkadang menggunakan Google Slides.
 
-### Adaptive Loading - Improving User Experience on Low-end Devices
+### #1 Adaptive Loading - Improving User Experience on Low-end Devices
 
-Tautan: [s.id/adaptive-loading](https://s.id/adaptive-loading)
+Tautan: [bit.ly/dek-slide-adaptive-loading](https://bit.ly/dek-slide-adaptive-loading)
 
 Poster even:
 1. [Chrome Dev Summit Extended Jakarta 2019](/public/poster/chrome-dev-summit-extended-jakarta-2019.png) (7 Desember 2019)
+
+### #2 Vue.js Fundamental
+
+Tautan: [bit.ly/slide-vuejs](https://bit.ly/slide-vuejs)
+
+Poster even:
+1. [Vue.js Fundamental](/poster/himit-vuejs-fundamental.jpeg) (26 Juli 2020)
 
 ## Jalan Pintas Papan Ketik
 
