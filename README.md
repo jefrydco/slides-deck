@@ -34,7 +34,7 @@ Building the project for production
 $ SRC_SLIDE=sistem-reaktivitas-vuejs-bagian-1 yarn build
 ```
 
-Link: [s.id/dek-slide-sistem-reaktivitas-vuejs-1](https://s.id/dek-slide-sistem-reaktivitas-vuejs-1)
+Link: [bit.ly/dek-slide-sistem-reaktivitas-vuejs-1](https://bit.ly/dek-slide-sistem-reaktivitas-vuejs-1)
 
 Even poster:
 1. [JakartaJS Meetup #56 x Mekari](/poster/jakartajs-meetup-56-x-mekari.jpeg) (20 February 2020)
@@ -45,10 +45,14 @@ Besides of using self-hosted, sometimes I also use Google slides.
 
 ### Adaptive Loading - Improving User Experience on Low-end Devices
 
-Link: [s.id/dek-slide-adaptive-loading](https://s.id/dek-slide-adaptive-loading)
+Link: [bit.ly/dek-slide-adaptive-loading](https://bit.ly/dek-slide-adaptive-loading)
 
 Even poster:
 1. [Chrome Dev Summit Extended Jakarta 2019](/poster/chrome-dev-summit-extended-jakarta-2019.png) (7 December 2019)
+
+### Vue.js Fundamental
+
+[]
 
 ## Keyboard Shortcut
 
