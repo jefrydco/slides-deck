@@ -1,4 +1,4 @@
 # Sumber Artikel
 
-1. [s.id/sistem-reaktivitas-vuejs-1](https://s.id/sistem-reaktivitas-vuejs-1)
-2. [s.id/sistem-reaktivitas-vuejs-2](https://s.id/sistem-reaktivitas-vuejs-2)
+1. [bit.ly/sistem-reaktivitas-vuejs-1](https://bit.ly/sistem-reaktivitas-vuejs-1)
+2. [bit.ly/sistem-reaktivitas-vuejs-2](https://bit.ly/sistem-reaktivitas-vuejs-2)
