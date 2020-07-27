@@ -91,4 +91,4 @@ Most of the code in this project is coming from [mdx-vue-deck](https://github.co
 
 Source code is available under [MIT](https://choosealicense.com/licenses/mit/) license.
 
-Content is available under [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/) license.
+Content is available under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) license.

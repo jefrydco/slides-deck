@@ -91,4 +91,4 @@ Sebagian besar kode di proyek ini datang dari [mdx-vue-deck](https://github.com/
 
 Kode sumber tersedia dibawah lisensi [MIT](https://choosealicense.com/licenses/mit/).
 
-Konten tersedia dibawah lisensi [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+Konten tersedia dibawah lisensi [Creative Commons Non Atribusi Non Komersial Berbagi Serupa](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.id).
