@@ -44,6 +44,7 @@ Tautan: [bit.ly/dek-slide-sistem-reaktivitas-vuejs-1](https://bit.ly/dek-slide-s
 
 Poster even:
 1. [JakartaJS Meetup #56 x Mekari](/public/poster/jakartajs-meetup-56-x-mekari.jpeg) (20 Februari 2020)
+2. [SurabayaJS Meetup #10](/poster/surabayajs-meetup-10.png) (31 Juli 2020)
 
 ## Google Slides
 

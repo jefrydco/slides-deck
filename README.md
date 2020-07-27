@@ -44,6 +44,7 @@ Link: [bit.ly/dek-slide-sistem-reaktivitas-vuejs-1](https://bit.ly/dek-slide-sis
 
 Even poster:
 1. [JakartaJS Meetup #56 x Mekari](/poster/jakartajs-meetup-56-x-mekari.jpeg) (20 February 2020)
+2. [SurabayaJS Meetup #10](/poster/surabayajs-meetup-10.png) (31 July 2020)
 
 ## Google Slides
 
