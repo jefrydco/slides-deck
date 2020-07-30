@@ -2,6 +2,10 @@
   @apply text-6xl mb-5 font-heading;
 }
 
+.h4 {
+  @apply text-3xl;
+}
+
 .paragraph-20 {
   font-size: 20px;
 }
