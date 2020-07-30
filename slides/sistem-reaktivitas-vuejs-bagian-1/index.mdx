@@ -10,6 +10,7 @@ import Appear from '@/components/Appear'
     <p>Rekanan Insinyur Perangkat Lunak Bagian Depan @ <span class="text-blue-500">DANA Indonesia</span></p>
     <p>Kontributor Komunitas <span class="text-logo-vue">Vue.js</span> Indonesia</p>
     <img class="mt-5 mx-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA/CAMAAACCXfuUAAAAh1BMVEVHcEwhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvNiF0boAAAALHRSTlMAIJBeMxP1zJlmmAY1O7f51ifBCSxHlfNNh6Pn7H5x/Ric46/hUtl1QKhr0UvQqeIAAAHbSURBVHjavZZnb4MwEECPYcweGZA9mjSr/v+/r0qLucg9i3NV9X0882TsGwB/SnaYhYgAC1KNsJfH4OAoIpMgM8VI8VgnhqjYyObVOyg+0QKQULmQANIqgqqW39TGwjsQ6MUcXmmC0x7FaDYuIsJHs87sYgg/yM+DeeWIiDeYnWCJaHa4JUdEgqGECJFADgmY6NCcECmCfnmhAz5T3OgErPvAhSmq3KwxwRQL811vTFF3k8BSZ4k1aNaW29nTTVj8mDKxIXaE1p1e2uHYB0tD1OU4AwuxLgojfunjnk30LaLENNHsRsSpTXyMiGBjiZfjJsaYDlJMXgkJMSVFkxKPXPahB0tUK9B84HDliOpgFvOMJWJb5XrMA0vERr7qbyVXFMbdbJniyuzjnCdOdDq2feANbGKMpP7wLRWbfnlpFYGkVdh1Lm01xyMTon0CFJFOYmMXQ2K/SOEJ+aJIcVZSXb6nxXka4axsqGPo1YuU969ctG18lJVCqhs5w5x+kBAvGvM2BeVNJ2Ne6ZHefUQ7B0AhRvaTQUZ687Oy05VbD0hEjE/5RZA82S3bNE2XSXJDySDbbdCLgY+vDM9drHYuHia+Dh0s/EmLtlNw5fTsaw/cEetVA79iCv/HJ2tF+J+Kc7zlAAAAAElFTkSuQmCC" width="56" height="63" alt="jefrydco" />
+    <h3 class="h3 mt-5">@jefrydco</h3>
   </Appear>
 </div>
 
@@ -60,10 +61,16 @@ import Appear from '@/components/Appear'
 ---
 
 <div class="w-full max-w-3xl">
+  <h3 class="h4 text-center mb-5 text-blue-500">Apa itu Sistem Reaktivitas?</h3>
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/spreadsheet-average-reactivity-by-jefrydco.webm" autoplay="" loop="" muted="" playsinline=""/>
+  <Appear>
+    <p class="text-center mt-5">Sistem reaktivitas adalah ketika suatu <span class="text-blue-500">keadaan berubah</span>, <span class="text-blue-500">keadaan lain</span> yang <span class="text-blue-500">berhubungan</span> akan ikut <span class="text-blue-500">berubah</span>.</p>
+  </Appear>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 1</h3>
 
 ```html
 <div class='demo-card'>
@@ -86,6 +93,8 @@ import Appear from '@/components/Appear'
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 1</h3>
+
 <div class="bg-white rounded overflow-hidden p-4">
   <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-1.html"></iframe>
 </div>
@@ -95,6 +104,8 @@ import Appear from '@/components/Appear'
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 2 - Bagian 1</h3>
 
 ```javascript
 const OPERATOR = {
@@ -121,6 +132,8 @@ document.addEventListener('DOMContentLoaded', mulai)
 
 ---
 
+<h3 class="h4 text-center mb-5">Kode Tahap 2 - Bagian 2</h3>
+
 ```javascript
 function mulai() {
   // ... Kode sebelumnya
@@ -137,6 +150,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 2</h3>
 
 <div class="w-full max-w-3xl flex flex-row justify-between">
   <div>
@@ -166,6 +181,8 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Kode Tahap 3</h3>
+
 ```javascript
 function mulai() {
   // ... Kode sebelumnya
@@ -191,6 +208,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 3 - Tampilan</h3>
 
 <div class="w-full max-w-3xl flex flex-row justify-between">
   <div>
@@ -225,11 +244,15 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 3 - Konsol Pengembang</h3>
+
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/reset-state.webm" autoplay="" loop="" muted="" playsinline=""/>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 4 - Bagian 1</h3>
 
 ```javascript
 function mulai() {
@@ -260,6 +283,8 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Kode Tahap 4 - Bagian 2</h3>
+
 ```javascript
 function mulai() {
   // ... Kode sebelumnya
@@ -280,6 +305,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 4 - Tampilan</h3>
 
 <div class="w-full max-w-3xl flex flex-row justify-between">
   <div>
@@ -320,11 +347,15 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 4 - Konsol Peramban</h3>
+
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/media.io_recalculate-state.webm" autoplay="" loop="" muted="" playsinline=""/>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 5</h3>
 
 ```javascript
 function mulai() {
@@ -349,6 +380,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 5 - Tampilan</h3>
 
 <div class="w-full max-w-3xl flex flex-row justify-between">
   <div>
@@ -394,6 +427,7 @@ function mulai() {
 </div>
 
 ---
+<h3 class="h4 text-center mb-5">Demo Tahap 5 - Konsol Peramban</h3>
 
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/reactivity-event-listener.webm" autoplay="" loop="" muted="" playsinline=""/>
@@ -401,9 +435,13 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Yeaye, berhasil! 🤩</h3>
+
 ![Yes](/gif/yes.gif)
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 6</h3>
 
 ```javascript
 function mulai() {
@@ -418,6 +456,8 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 6 - Tampilan</h3>
+
 <div class="bg-white rounded overflow-hidden p-4">
   <iframe src="/slides/sistem-reaktivitas-vuejs-bagian-1/demos/demo-6.html"></iframe>
 </div>
@@ -427,6 +467,8 @@ function mulai() {
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 6 - Konsol Peramban</h3>
 
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/media.io_change-does-not-affect-ui.webm" autoplay="" loop="" muted="" playsinline=""/>
@@ -438,6 +480,8 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Konsep Pengambil & Pengatur - Bagian 1</h3>
+
 ```javascript
 const manusia = {
   nama: 'jefrydco'
@@ -445,6 +489,8 @@ const manusia = {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Konsep Pengambil & Pengatur - Bagian 2</h3>
 
 ```javascript
 let nama = manusia['nama']
@@ -465,11 +511,15 @@ Object.defineProperty(manusia, 'nama', {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Pengambil & Pengatur</h3>
+
 <div class="w-full max-w-2xl">
   <img src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/getter-setter.png" alt="Getter Setter"/>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 7 - Bagian 1</h3>
 
 ```javascript
 function mulai() {
@@ -485,6 +535,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 7 - Bagian 2</h3>
 
 ```javascript
 function mulai() {
@@ -507,6 +559,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 7 - Tampilan</h3>
 
 <div class="w-full max-w-3xl flex flex-row justify-between">
   <div>
@@ -538,11 +592,15 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 7 - Konsol Peramban</h3>
+
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/getter-setter-input1.webm" autoplay="" loop="" muted="" playsinline=""/>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 8 - Bagian 1</h3>
 
 ```javascript
 function mulai() {
@@ -562,6 +620,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Kode Tahap 8 - Bagian 2</h3>
 
 ```javascript
 function mulai() {
@@ -591,6 +651,8 @@ function mulai() {
 ```
 
 ---
+
+<h3 class="h4 text-center mb-5">Demo Tahap 8 - Tampilan</h3>
 
 <div class="w-full max-w-3xl flex flex-row justify-between">
   <div>
@@ -622,11 +684,15 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 8 - Konsol Peramban</h3>
+
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/getter-setter-all.webm" autoplay="" loop="" muted="" playsinline=""/>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Konsol Peramban Vue.js</h3>
 
 <div class="w-full max-w-xl">
   <img src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/getter-setter-vue.png" alt="Getter Setter Vue"/>
@@ -634,11 +700,15 @@ function mulai() {
 
 ---
 
+<h3 class="h4 text-center mb-5">Demo Tahap 8 - Konsol Peramban Otomatis</h3>
+
 <div class="w-full max-w-4xl">
   <video src="/slides/sistem-reaktivitas-vuejs-bagian-1/videos/media.io_set-timeout-getter-setter.webm" autoplay="" loop="" muted="" playsinline=""/>
 </div>
 
 ---
+
+<h3 class="h4 text-center mb-5">Yeaye, berhasil! 🤩</h3>
 
 ![Dancing](/gif/dancing.gif)
 
@@ -648,8 +718,14 @@ function mulai() {
 
 ---
 
-<div class="w-full max-w-xl">
-  <img src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/simplified-version-of-vuejs-reactivity-system.png" alt="Getter Setter Vue"/>
+<div class="w-full max-w-4xl">
+  <h3 class="h4 text-center mb-5 text-blue-500">Diagram Sistem Reaktivitas Vue.js Sederhana</h3>
+
+  <div class="flex justify-center">
+    <img class="max-w-md" src="/slides/sistem-reaktivitas-vuejs-bagian-1/images/simplified-version-of-vuejs-reactivity-system.png" alt="Getter Setter Vue"/>
+  </div>
+
+  <p class="text-center mt-5">Data memiliki <span class="text-blue-500">pengambil</span> dan <span class="text-blue-500">pengatur</span>. Pengambil bertugas <span class="text-blue-500">mengembalikan nilai</span>. Pengatur bertugas <span class="text-blue-500">mengatur nilai, mengkalkulasi hasil dan memutakhirkan tampilan</span>.</p>
 </div>
 
 ---
@@ -660,5 +736,7 @@ function mulai() {
 
 ---
 
-<h2>Terima Kasih</h2>
-<img class="mt-5 mx-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA/CAMAAACCXfuUAAAAh1BMVEVHcEwhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvNiF0boAAAALHRSTlMAIJBeMxP1zJlmmAY1O7f51ifBCSxHlfNNh6Pn7H5x/Ric46/hUtl1QKhr0UvQqeIAAAHbSURBVHjavZZnb4MwEECPYcweGZA9mjSr/v+/r0qLucg9i3NV9X0882TsGwB/SnaYhYgAC1KNsJfH4OAoIpMgM8VI8VgnhqjYyObVOyg+0QKQULmQANIqgqqW39TGwjsQ6MUcXmmC0x7FaDYuIsJHs87sYgg/yM+DeeWIiDeYnWCJaHa4JUdEgqGECJFADgmY6NCcECmCfnmhAz5T3OgErPvAhSmq3KwxwRQL811vTFF3k8BSZ4k1aNaW29nTTVj8mDKxIXaE1p1e2uHYB0tD1OU4AwuxLgojfunjnk30LaLENNHsRsSpTXyMiGBjiZfjJsaYDlJMXgkJMSVFkxKPXPahB0tUK9B84HDliOpgFvOMJWJb5XrMA0vERr7qbyVXFMbdbJniyuzjnCdOdDq2feANbGKMpP7wLRWbfnlpFYGkVdh1Lm01xyMTon0CFJFOYmMXQ2K/SOEJ+aJIcVZSXb6nxXka4axsqGPo1YuU969ctG18lJVCqhs5w5x+kBAvGvM2BeVNJ2Ne6ZHefUQ7B0AhRvaTQUZ687Oy05VbD0hEjE/5RZA82S3bNE2XSXJDySDbbdCLgY+vDM9drHYuHia+Dh0s/EmLtlNw5fTsaw/cEetVA79iCv/HJ2tF+J+Kc7zlAAAAAElFTkSuQmCC" width="56" height="63" alt="jefrydco" />
+<div class="w-full max-w-xl">
+  <img class="mx-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAA/CAMAAACCXfuUAAAAh1BMVEVHcEwhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvMhlvNiF0boAAAALHRSTlMAIJBeMxP1zJlmmAY1O7f51ifBCSxHlfNNh6Pn7H5x/Ric46/hUtl1QKhr0UvQqeIAAAHbSURBVHjavZZnb4MwEECPYcweGZA9mjSr/v+/r0qLucg9i3NV9X0882TsGwB/SnaYhYgAC1KNsJfH4OAoIpMgM8VI8VgnhqjYyObVOyg+0QKQULmQANIqgqqW39TGwjsQ6MUcXmmC0x7FaDYuIsJHs87sYgg/yM+DeeWIiDeYnWCJaHa4JUdEgqGECJFADgmY6NCcECmCfnmhAz5T3OgErPvAhSmq3KwxwRQL811vTFF3k8BSZ4k1aNaW29nTTVj8mDKxIXaE1p1e2uHYB0tD1OU4AwuxLgojfunjnk30LaLENNHsRsSpTXyMiGBjiZfjJsaYDlJMXgkJMSVFkxKPXPahB0tUK9B84HDliOpgFvOMJWJb5XrMA0vERr7qbyVXFMbdbJniyuzjnCdOdDq2feANbGKMpP7wLRWbfnlpFYGkVdh1Lm01xyMTon0CFJFOYmMXQ2K/SOEJ+aJIcVZSXb6nxXka4axsqGPo1YuU969ctG18lJVCqhs5w5x+kBAvGvM2BeVNJ2Ne6ZHefUQ7B0AhRvaTQUZ687Oy05VbD0hEjE/5RZA82S3bNE2XSXJDySDbbdCLgY+vDM9drHYuHia+Dh0s/EmLtlNw5fTsaw/cEetVA79iCv/HJ2tF+J+Kc7zlAAAAAElFTkSuQmCC" width="56" height="63" alt="jefrydco" />
+  <p class="text-center mt-5">“Hal-hal <span class="text-blue-500">besar</span> itu selalu <br /><span class="text-blue-500">berawal</span> dari <span class="text-blue-500">diri</span> kita <span class="text-blue-500">sendiri</span>”</p>
+</div>
