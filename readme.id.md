@@ -61,6 +61,8 @@ Poster even:
 
 Tautan: [bit.ly/slide-vuejs](https://bit.ly/slide-vuejs)
 
+Video: [bit.ly/playback-vuejs](https://bit.ly/playback-vuejs)
+
 Poster even:
 1. [Vue.js Fundamental](/poster/himit-vuejs-fundamental.jpeg) (26 Juli 2020)
 

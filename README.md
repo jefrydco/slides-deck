@@ -61,6 +61,8 @@ Even poster:
 
 Link: [bit.ly/slide-vuejs](https://bit.ly/slide-vuejs)
 
+Video: [bit.ly/playback-vuejs](https://bit.ly/playback-vuejs)
+
 Even poster:
 1. [Vue.js Fundamental](/poster/himit-vuejs-fundamental.jpeg) (26 July 2020)
 
