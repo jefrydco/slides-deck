@@ -42,7 +42,7 @@ $ SRC_SLIDE=sistem-reaktivitas-vuejs-bagian-1 yarn build
 
 Link: [bit.ly/dek-slide-sistem-reaktivitas-vuejs-1](https://bit.ly/dek-slide-sistem-reaktivitas-vuejs-1)
 
-Even poster:
+Event poster:
 1. [JakartaJS Meetup #56 x Mekari](/poster/jakartajs-meetup-56-x-mekari.jpeg) (20 February 2020)
 2. [SurabayaJS Meetup #10](/poster/surabayajs-meetup-10.png) (31 July 2020)
 
@@ -54,7 +54,7 @@ Besides of using self-hosted, sometimes I also use Google slides.
 
 Link: [bit.ly/dek-slide-adaptive-loading](https://bit.ly/dek-slide-adaptive-loading)
 
-Even poster:
+Event poster:
 1. [Chrome Dev Summit Extended Jakarta 2019](/poster/chrome-dev-summit-extended-jakarta-2019.png) (7 December 2019)
 
 ### #2 Vue.js Fundamental
@@ -63,8 +63,44 @@ Link: [bit.ly/slide-vuejs](https://bit.ly/slide-vuejs)
 
 Video: [bit.ly/playback-vuejs](https://bit.ly/playback-vuejs)
 
-Even poster:
+Event poster:
 1. [Vue.js Fundamental](/poster/himit-vuejs-fundamental.jpeg) (26 July 2020)
+
+### #3 Vue.js Intermediate - Build Scalable Vue.js App with VueX
+
+Link: [bit.ly/vuejs-vuex](https://bit.ly/vuejs-vuex)
+
+Video: [bit.ly/playback-vuejs-vuex](http://bit.ly/playback-vuejs-vuex)
+
+Event poster:
+1. [Vue.js Intermediate](/poster/himit-vuejs-intermediate.jpeg) (04 October 2020)
+
+### #4 _Open Source untuk Kaum Rebahan_
+
+Link: [bit.ly/oss-for-laymen](https://bit.ly/oss-for-laymen)
+
+Video: -
+
+Event poster:
+1. [Jatimdev - OSS for Laymen](/poster/jatimdev-oss-for-laymen.jpeg) (25 October 2020)
+
+### #5 Simple SEO Recipe for Newbie
+
+Link: [bit.ly/seo-pemula](https://bit.ly/seo-pemula)
+
+Video: [Chrome Dev Summit Extended Day 2](https://www.youtube.com/watch?v=TDHM8dpLRCg)
+
+Event poster:
+1. [Simple SEO Recipe for Newbie](/poster/gdg-indonesia-cds-extended-day-2.jpeg) (23 January 2021)
+
+### #6 Uncover Vue 3 Reactivity System
+
+Link: [bit.ly/slide-vue-3-reactivity](https://bit.ly/slide-vue-3-reactivity)
+
+Video: -
+
+Event poster:
+1. [Uncover Vue 3 Reactivity](/poster/tutorteknik-uncover-vue-3-reactivity.jpeg) (24 April 2021)
 
 ## Keyboard Shortcut
 

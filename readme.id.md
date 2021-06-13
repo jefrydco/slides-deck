@@ -66,6 +66,42 @@ Video: [bit.ly/playback-vuejs](https://bit.ly/playback-vuejs)
 Poster even:
 1. [Vue.js Fundamental](/poster/himit-vuejs-fundamental.jpeg) (26 Juli 2020)
 
+### #3 Vue.js Intermediate - Build Scalable Vue.js App with VueX
+
+Tautan: [bit.ly/vuejs-vuex](https://bit.ly/vuejs-vuex)
+
+Video: [bit.ly/playback-vuejs-vuex](http://bit.ly/playback-vuejs-vuex)
+
+Even poster:
+1. [Vue.js Intermediate](/poster/himit-vuejs-intermediate.jpeg) (04 October 2020)
+
+### #4 _Open Source untuk Kaum Rebahan_
+
+Tautan: [bit.ly/oss-for-laymen](https://bit.ly/oss-for-laymen)
+
+Video: -
+
+Even poster:
+1. [Jatimdev - OSS for Laymen](/poster/jatimdev-oss-for-laymen.jpeg) (25 October 2020)
+
+### #5 Simple SEO Recipe for Newbie
+
+Tautan: [bit.ly/seo-pemula](https://bit.ly/seo-pemula)
+
+Video: [Chrome Dev Summit Extended Day 2](https://www.youtube.com/watch?v=TDHM8dpLRCg)
+
+Even poster:
+1. [Simple SEO Recipe for Newbie](/poster/gdg-indonesia-cds-extended-day-2.jpeg) (23 January 2021)
+
+### #6 Uncover Vue 3 Reactivity System
+
+Tautan: [bit.ly/slide-vue-3-reactivity](https://bit.ly/slide-vue-3-reactivity)
+
+Video: -
+
+Even poster:
+1. [Uncover Vue 3 Reactivity](/poster/tutorteknik-uncover-vue-3-reactivity.jpeg) (24 April 2021)
+
 ## Jalan Pintas Papan Ketik
 
 | Kunci       | Deskripsi                                           |
