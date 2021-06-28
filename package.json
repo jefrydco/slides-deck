@@ -40,7 +40,7 @@
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
     "prettify-xml": "^1.2.0",
-    "prismjs": "^1.23.0",
+    "prismjs": "^1.24.0",
     "register-service-worker": "^1.7.2",
     "serialize-javascript": "^5.0.1",
     "tailwindcss": "^1.7.5",
